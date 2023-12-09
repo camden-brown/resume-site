@@ -1,0 +1,53 @@
+@use "../../sass/variables.scss";
+
+mat-sidenav-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin: 2rem 0;
+  overflow: auto;
+
+  li {
+    margin: 1rem 0;
+
+    a {
+      align-items: center;
+      display: flex;
+      gap: 0.5rem;
+      color: #dbdfe9;
+
+      &:hover,
+      &:focus {
+        color: variables.$white;
+
+        mat-icon {
+          color: variables.$white;
+        }
+      }
+
+      mat-icon {
+        color: #4b5675;
+      }
+    }
+  }
+}
+
+.sidenav {
+  background-color: variables.$sidebar-base-color;
+  width: variables.$sidebar-width;
+  padding: 1rem;
+}
+
+.home {
+  background-color: variables.$primary-home-background;
+  flex: 1;
+}

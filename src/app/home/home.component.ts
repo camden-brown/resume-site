@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CurrentUserInfoComponent } from './components/current-user-info/current-user-info.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'home',
@@ -12,96 +13,44 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     CurrentUserInfoComponent,
     RouterModule,
+    MatButtonModule,
     MatIconModule,
   ],
   template: `
     <mat-sidenav-container>
       <mat-sidenav class="sidenav" mode="side" opened>
-        <div class="logo">
-          <a routerLink="/home">
-            <img src="assets/images/logo.svg" alt="logo" />
-          </a>
-        </div>
         <current-user-info></current-user-info>
 
         <ul>
           <li class="fwt-500">
             <a [routerLink]="['/home']" routerLinkActive="router-link-active">
               <mat-icon>warehouse</mat-icon>
-              Locations
+              Projects
             </a>
           </li>
-
           <li class="fwt-500">
             <a [routerLink]="['/home']" routerLinkActive="router-link-active">
-              <mat-icon>local_shipping</mat-icon>
-              Orders
+              <mat-icon>book</mat-icon>
+              Articles
+            </a>
+          </li>
+          <li class="fwt-500">
+            <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+              <mat-icon>person</mat-icon>
+              About Me
             </a>
           </li>
         </ul>
       </mat-sidenav>
       <mat-sidenav-content class="home">
+        <div>
+          <button mat-raised-button color="primary">Contact Me</button>
+        </div>
         <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
-  styles: [
-    `
-      @use '/src/sass/variables.scss';
-
-      mat-sidenav-container {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        width: 100%;
-      }
-
-      .logo {
-        width: 100px;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        margin: 2rem 0;
-        overflow: auto;
-
-        li {
-          margin: 1rem 0;
-
-          a {
-            align-items: center;
-            display: flex;
-            gap: 0.5rem;
-            color: #dbdfe9;
-
-            &:hover,
-            &:focus {
-              color: variables.$white;
-
-              mat-icon {
-                color: variables.$white;
-              }
-            }
-
-            mat-icon {
-              color: #4b5675;
-            }
-          }
-        }
-      }
-
-      .sidenav {
-        background-color: variables.$sidebar-base-color;
-        width: variables.$sidebar-width;
-        padding: 1rem;
-      }
-
-      .home {
-        background-color: variables.$primary-home-background;
-        flex: 1;
-      }
-    `,
-  ],
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   constructor() {}

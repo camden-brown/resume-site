@@ -67,7 +67,7 @@
               "buildTarget": "resume-site:build:production"
             },
             "development": {
-              "buildTarget": "resume-site:build:production"
+              "buildTarget": "resume-site:build:development"
             }
           },
           "defaultConfiguration": "development"
