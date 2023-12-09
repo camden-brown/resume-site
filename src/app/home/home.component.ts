@@ -28,12 +28,12 @@ import { MatButtonModule } from '@angular/material/button';
               Projects
             </a>
           </li>
-          <li class="fwt-500">
+          <!-- <li class="fwt-500">
             <a [routerLink]="['/home']" routerLinkActive="router-link-active">
               <mat-icon>book</mat-icon>
               Articles
             </a>
-          </li>
+          </li> -->
           <li class="fwt-500">
             <a [routerLink]="['/home']" routerLinkActive="router-link-active">
               <mat-icon>person</mat-icon>
