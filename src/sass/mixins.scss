@@ -1,0 +1,7 @@
+@use "./variables.scss";
+
+@mixin accent-dark-button {
+  font-weight: 500;
+  color: variables.$light-inverse;
+  background-color: variables.$light;
+}

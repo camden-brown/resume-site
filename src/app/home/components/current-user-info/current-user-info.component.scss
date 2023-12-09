@@ -1,0 +1,30 @@
+@use "/src/sass/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid variables.$border-color;
+
+  .user-details {
+    display: flex;
+    gap: 0.5rem;
+
+    .avatar {
+      font-size: 1rem;
+      padding: 0.5rem;
+      background-color: variables.$primary-blue;
+      border-radius: 5px;
+    }
+  }
+
+  .avatar {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}

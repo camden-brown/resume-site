@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+
+  .breadcrumbs {
+    display: flex;
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+
+      mat-icon {
+        font-size: 18px;
+        height: 18px;
+        width: 18px;
+      }
+    }
+  }
+}
