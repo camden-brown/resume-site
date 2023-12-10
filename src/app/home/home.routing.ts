@@ -18,6 +18,11 @@ export const HOME_ROUTES: Routes = [
             (m) => m.DASHBOARD_ROUTES
           ),
       },
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./about-me/about-me.routing').then((m) => m.ABOUT_ME_ROUTES),
+      },
     ],
   },
 ];

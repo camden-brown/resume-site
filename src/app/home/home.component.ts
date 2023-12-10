@@ -35,7 +35,10 @@ import { MatButtonModule } from '@angular/material/button';
             </a>
           </li> -->
           <li class="fwt-500">
-            <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+            <a
+              [routerLink]="['/home', 'about']"
+              routerLinkActive="router-link-active"
+            >
               <mat-icon>person</mat-icon>
               About Me
             </a>
