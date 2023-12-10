@@ -29,6 +29,10 @@
     }
 
     &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
       &__name {
         font-size: 1.5rem;
       }
