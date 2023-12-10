@@ -23,6 +23,11 @@ export const HOME_ROUTES: Routes = [
         loadChildren: () =>
           import('./about-me/about-me.routing').then((m) => m.ABOUT_ME_ROUTES),
       },
+      {
+        path: 'projects',
+        loadChildren: () =>
+          import('./projects/projects.routing').then((m) => m.PROJECTS_ROUTES),
+      },
     ],
   },
 ];

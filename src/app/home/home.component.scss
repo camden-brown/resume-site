@@ -11,6 +11,11 @@ mat-sidenav-container {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
+
+  .contact-me-button {
+    background-color: variables.$green;
+    font-size: 0.8rem;
+  }
 }
 
 ul {

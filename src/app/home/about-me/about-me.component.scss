@@ -33,6 +33,10 @@
       flex-direction: column;
       gap: 0.5rem;
 
+      &__description {
+        color: variables.$text-gray-800;
+      }
+
       &__name {
         font-size: 1.5rem;
       }
@@ -46,6 +50,15 @@
           align-items: center;
           font-size: 0.8rem;
           gap: 0.25rem;
+
+          p,
+          a {
+            color: variables.$text-gray-500;
+          }
+
+          a {
+            text-decoration: none;
+          }
         }
       }
     }
