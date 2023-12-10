@@ -46,6 +46,12 @@ import { MatButtonModule } from '@angular/material/button';
               About Me
             </a>
           </li>
+          <li class="fwt-500">
+            <a download href="../assets/Camden_Brown_Resume.pdf">
+              <mat-icon>download</mat-icon>
+              Resume
+            </a>
+          </li>
         </ul>
       </mat-sidenav>
       <mat-sidenav-content class="home">
