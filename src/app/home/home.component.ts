@@ -43,7 +43,7 @@ import { MatButtonModule } from '@angular/material/button';
         </ul>
       </mat-sidenav>
       <mat-sidenav-content class="home">
-        <div>
+        <div class="top-nav">
           <button mat-raised-button color="primary">Contact Me</button>
         </div>
         <router-outlet></router-outlet>
