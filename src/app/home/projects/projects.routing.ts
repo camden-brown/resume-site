@@ -20,6 +20,33 @@ export const PROJECTS_ROUTES: Routes = [
             (m) => m.SympliactComponent
           ),
       },
+      {
+        path: 'hexa',
+        loadComponent: () =>
+          import('./hexa/hexa.component').then((m) => m.HexaComponent),
+      },
+      {
+        path: 'wayspring',
+        loadComponent: () =>
+          import('./wayspring/wayspring.component').then(
+            (m) => m.WayspringComponent
+          ),
+      },
+      {
+        path: 'metova',
+        loadComponent: () =>
+          import('./metova/metova.component').then((m) => m.MetovaComponent),
+      },
+      {
+        path: 'airvel',
+        loadComponent: () =>
+          import('./airvel/airvel.component').then((m) => m.AirvelComponent),
+      },
+      {
+        path: 'sxm',
+        loadComponent: () =>
+          import('./sxm/sxm.component').then((m) => m.SxmComponent),
+      },
     ],
   },
 ];
