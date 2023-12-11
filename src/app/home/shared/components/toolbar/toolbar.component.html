@@ -15,7 +15,13 @@
       class="fwt-600 breadcrumb"
       *ngFor="let segment of segments(); let i = index"
     >
+      @if (i !== segments().length - 1) {
+      <a [routerLink]="segments().slice(0, i + 1)">
+        {{ segment | titlecase }}
+      </a>
+      } @else {
       {{ segment | titlecase }}
+      }
       <mat-icon class="text-gray-700" *ngIf="i != segments().length - 1">
         chevron_right
       </mat-icon>

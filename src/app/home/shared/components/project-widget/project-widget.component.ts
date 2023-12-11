@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
       class="widget"
       [routerLink]="['/home', 'projects', projectRouteName]"
     >
-      <img [src]="imageSrc" />
+      <ng-content select="[logo]"></ng-content>
       <h2 class="widget__title">{{ title }}</h2>
       <p class="widget__description">{{ description }}</p>
     </button>
@@ -23,5 +23,4 @@ export class ProjectWidgetComponent {
   @Input({ required: true }) title: string = '';
   @Input({ required: true }) description: string = '';
   @Input({ required: true }) projectRouteName: string = '';
-  @Input({ required: true }) imageSrc: string = '';
 }

@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { ToolBarComponent } from '../shared/components/toolbar/toolbar.component';
-import { ProjectWidgetComponent } from '../shared/components/project-widget/project-widget.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  imports: [ToolBarComponent, ProjectWidgetComponent],
+  template: '<router-outlet></router-outlet>',
+  imports: [RouterOutlet],
 })
 export class ProjectsComponent {
   constructor() {}
