@@ -47,6 +47,11 @@ export const PROJECTS_ROUTES: Routes = [
         loadComponent: () =>
           import('./sxm/sxm.component').then((m) => m.SxmComponent),
       },
+      {
+        path: 'otus',
+        loadComponent: () =>
+          import('./otus/otus.component').then((m) => m.OtusComponent),
+      },
     ],
   },
 ];

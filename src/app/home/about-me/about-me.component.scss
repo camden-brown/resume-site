@@ -3,14 +3,12 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
 
   .summary {
     display: flex;
     gap: 1rem;
-    width: 80%;
     padding: 2rem;
     background-color: variables.$card-background;
     border-radius: 10px;
@@ -33,6 +31,11 @@
       flex-direction: column;
       gap: 0.5rem;
 
+      &__contacts {
+        display: flex;
+        gap: 0.5rem;
+      }
+
       &__description {
         color: variables.$text-gray-800;
       }
@@ -43,7 +46,8 @@
 
       &__badges {
         display: flex;
-        gap: 1.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
 
         &__badge {
           display: flex;
@@ -61,6 +65,21 @@
           }
         }
       }
+    }
+  }
+
+  .cards {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    .card {
+      border: 1px solid variables.$border-color;
+      border-radius: 10px;
+      background-color: variables.$card-background;
+      height: 250px;
+      width: 250px;
+      padding: 1rem;
     }
   }
 }

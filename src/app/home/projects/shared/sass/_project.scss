@@ -3,14 +3,12 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
 
   .summary {
     display: flex;
     gap: 1rem;
-    width: 80%;
     padding: 2rem;
     background-color: variables.$card-background;
     border-radius: 10px;
@@ -40,6 +38,18 @@
       &__description {
         font-size: 0.9rem;
         color: variables.$text-gray-800;
+      }
+
+      &__technologies {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.8rem;
+
+        p {
+          color: variables.$text-gray-500;
+        }
       }
 
       &__name {
