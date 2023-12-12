@@ -8,6 +8,11 @@ export const HOME_ROUTES: Routes = [
     children: [
       {
         path: '',
+        pathMatch: 'full',
+        redirectTo: 'about',
+      },
+      {
+        path: '',
         loadChildren: () =>
           import('./dashboard/dashboard.routing').then(
             (m) => m.DASHBOARD_ROUTES
