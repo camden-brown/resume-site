@@ -76,6 +76,24 @@
           }
         }
       }
+
+      &__achievements {
+        h4 {
+          margin-bottom: 0.25rem;
+        }
+
+        ul {
+          display: flex;
+          gap: 0.25rem;
+          flex-direction: column;
+          list-style: circle;
+        }
+
+        li {
+          font-size: 0.9rem;
+          color: variables.$text-gray-800;
+        }
+      }
     }
   }
 }
