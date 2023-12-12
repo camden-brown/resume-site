@@ -70,6 +70,7 @@
 
   .cards {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 1rem;
 
@@ -77,9 +78,61 @@
       border: 1px solid variables.$border-color;
       border-radius: 10px;
       background-color: variables.$card-background;
-      height: 250px;
-      width: 250px;
+      min-height: 250px;
+      height: fit-content;
+      width: 200px;
       padding: 1rem;
+
+      &__content {
+        margin-top: 0.25rem;
+
+        &__legend {
+          display: flex;
+          gap: 0.25rem;
+          margin-bottom: 0.5rem;
+          font-size: 0.8rem;
+
+          .advanced {
+            color: variables.$green;
+          }
+
+          .intermediate {
+            color: variables.$primary-blue;
+          }
+
+          .novice {
+            color: variables.$yellow;
+          }
+
+          i,
+          span {
+            color: variables.$text-gray-500;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          li {
+            font-size: 0.9rem;
+            color: variables.$text-gray-800;
+
+            &.advanced {
+              color: variables.$green;
+            }
+
+            &.intermediate {
+              color: variables.$primary-blue;
+            }
+
+            &.novice {
+              color: variables.$yellow;
+            }
+          }
+        }
+      }
     }
   }
 }
